@@ -1,0 +1,37 @@
+.container
+	.row.offset-top-60.offset-bottom-60
+		.col-xs-12.col-sm-6.col-md-4
+			.row.form-contact
+				.col-xs-12
+					h2.text-light
+						| {{strings.pages.contact.title}}
+				
+				.col-xs-12.offset-top-30
+					h4.text-light
+						| Nome
+					input.form-control(type='text')
+				
+				.col-xs-12.offset-top-15
+					h4.text-light
+						| Email
+					input.form-control(type='text')
+
+				.col-xs-12.offset-top-15
+					h4.text-light
+						| Mensagem
+					textarea.form-control(type='text' rows='8')
+
+				.col-xs-12.offset-top-30
+					button.btn.btn-primary.btn-block.btn-lg(type='button') 
+						span.fa.fa-send-o
+						|  Enviar
+
+		.col-xs-12.col-sm-6.col-md-8
+			ng-map#map(default-style="false" center='{{lattitude}},{{longitude}}' zoom='15' scrollwheel='false')
+				marker(id='#marker' position='{{lattitude}},{{longitude}}' on-click='contact.map.showInfoWindow("#info-window")')
+				info-window(id='#info-window' visible-on-marker='#marker')
+					div(ng-non-bindable='')
+						h4 {{strings.pages.contact.address.name}}
+						p {{strings.pages.contact.address.line1}}
+						p {{strings.pages.contact.address.line2}}
+						p {{strings.pages.contact.address.line3}}

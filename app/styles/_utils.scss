@@ -1,0 +1,219 @@
+@mixin box-shadow($x, $y, $spread, $color) {
+	-webkit-box-shadow: $x $y $spread $color;
+	-moz-box-shadow:    $x $y $spread $color;
+	box-shadow:         $x $y $spread $color;
+}
+
+@mixin transition($properties...) {
+	-webkit-transition: $properties;
+	-moz-transition:    $properties;
+	-ms-transition:     $properties;
+	-o-transition:      $properties;
+	transition:         $properties;
+}
+
+.offset-top-15 {
+	margin-top: 15px !important;
+}
+
+.offset-top-30 {
+	margin-top: 30px !important;
+}
+
+.offset-top-60 {
+	margin-top: 60px !important;
+}
+
+.offset-bottom-15 {
+	margin-bottom: 15px !important;
+}
+
+.offset-bottom-30 {
+	margin-bottom: 30px !important;
+}
+
+.offset-bottom-60 {
+	margin-bottom: 60px !important;
+}
+
+.offset-left-15 {
+	margin-left: 15px !important;
+}
+
+.offset-left-30 {
+	margin-left: 30px !important;
+}
+
+.text-line-spacing {
+	line-height: 30px;
+}
+
+.text-primary {
+	color: $brand-primary;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-gray {
+	color: $gray-light;
+}
+
+.text-gray-dark {
+	color: $gray-dark;
+}
+
+.text-light {	
+	font-weight: 300;	
+}
+
+.text-sm {
+	font-size: 1.2em;
+}
+
+.text-md {
+	font-size: 1.6em;
+}
+
+.text-lg {
+	font-size: 3em;
+}
+
+.text-xlg {
+	font-size: 4em;
+}
+
+.icon-xlg {
+	font-size: 8em;
+}
+
+.icon-lg {
+	font-size: 5em;
+}
+
+.icon-md {
+	font-size: 3em;
+}
+
+.icon-sm {
+	font-size: 1.2em;
+}
+
+// Para alinhar verticalmente duas divs uma do lado da outra
+.vcenter {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
+
+.separator {
+	display: block;
+	width: 70px;
+	margin: 15px auto !important;
+	border-bottom: 3px solid $main-color;
+
+	&.separator-white {
+		border-color: white;
+	}
+
+	&.separator-lg {
+		margin-top: 30px !important;
+		margin-bottom: 30px !important;
+	}
+}
+
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    &:focus, &:active {
+    	outline: none !important;
+    }
+
+    &.btn-pill {
+    	border-radius: 25px;
+    }
+}
+
+.btn.btn-outline {
+	background-color: transparent;
+	
+	&.btn-primary {
+		color: $brand-primary;
+		&:hover {
+			background-color: $brand-primary;
+			color: white;
+		}
+	}
+
+	&.btn-success {
+		color: $brand-success;
+		&:hover {
+			background-color: $brand-primary;
+			color: white;
+		}
+	}
+
+	&.btn-info {
+		color: $brand-info;
+		&:hover {
+			background-color: $brand-info;
+			color: white;
+		}
+	}
+
+	&.btn-warning {
+		color: $brand-warning;
+		&:hover {
+			background-color: $brand-warning;
+			color: white;
+		}
+	}
+
+	&.btn-danger {
+		color: $brand-danger;
+		&:hover {
+			background-color: $brand-danger;
+			color: white;
+		}
+	}
+}
+
+.outline-border {
+	&:focus {
+		border-color: $main-color;
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.input-style {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 15px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: $gray-lighter;
+}
+
+.form-control {
+	@at-root {
+		input#{&} {				
+			@extend .outline-border;
+		}
+
+		textarea#{&} {
+			@extend .outline-border;
+		}
+	}
+}
+
+.remove-margin {
+	margin: 0 !important;
+}
+
+.remove-padding {
+	padding: 0 !important;
+}
+
+.contain-horizontally {
+	max-width: 100%;
+}

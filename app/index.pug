@@ -1,0 +1,10 @@
+extends ./templates/_skeleton.pug
+
+block header
+	div(ng-include="'../partials/header1.html'" ng-controller="HeaderCtrl as header")
+
+block page
+	div(ng-view='')
+
+block footer
+	div(ng-include="'../partials/footer1.html'")

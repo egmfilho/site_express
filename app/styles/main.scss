@@ -1,0 +1,24 @@
+@import "variables";
+// @import "variables-dark";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/compass-sass-mixins/lib/compass";
+
+.btn {
+	border-radius: 2px;
+}
+
+.paragraph, .quote {	
+	@media (min-width: $screen-sm-min) {
+		padding: 0 100px;
+	}
+}
+
+@import "utils";
+@import "header1";
+@import "footer1";
+@import "home";
+@import "about";
+@import "contact";
