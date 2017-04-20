@@ -1,4 +1,4 @@
-nav.navbar.navbar-default.navbar-fixed-top
+nav.navbar.navbar-default.navbar-fixed-top(ng-class='{"retreat": currentPath != "/"}')
 	.container
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar')
@@ -10,16 +10,38 @@ nav.navbar.navbar-default.navbar-fixed-top
 				//- img.img-responsive(src='')
 
 		#navbar.collapse.navbar-collapse
-			ul.nav.navbar-nav
+			ul.nav.navbar-nav.navbar-right
 				li(ng-repeat='item in strings.header.navbar.items track by $index' ng-class='{"active": $index == 0}' name='{{item.name}}')
 					a(ng-href='{{item.href}}') {{item.title}}
 
-.outdoor(ng-show='currentPath == "/"')
-	img(name='parallax' src='https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg' du-parallax y='header.parallax')
-	.cover
-		h2.title.text-center.text-gray-dark
-			| {{strings.header.banner.title}}
-		h4.subtitle.text-center.text-gray-dark.text-line-spacing
-			| {{strings.header.banner.subtitle}}
-		div.text-center
-			a.btn.btn-primary.btn-lg(ng-href='{{strings.header.banner.button.href}}') {{strings.header.banner.button.caption}}
+#carousel-header.carousel.slide(data-ride='carousel' ng-show='currentPath == "/"')
+	//- Wrapper for slides
+	.carousel-inner(role='listbox')
+		.item.active
+			div
+				.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')
+				.cover
+					h2.title.text-center
+						| Hello Template!
+					p.subtitle.text-center
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					p.text-center
+						a.btn.btn-default.btn-lg.btn-outline.text-white(href='/sobre') 
+							| Ver mais
+		.item
+			div
+				.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')
+				.cover
+					h2.title.text-center
+						| Hello Template!
+					p.subtitle.text-center
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					p.text-center
+						a.btn.btn-default.btn-lg.btn-outline.text-white(href='/sobre') 
+							| Ver mais
+
+	//- Controls
+	a.left.carousel-control(data-target="#carousel-header" role="button" data-slide='prev')
+		span.fa.fa-angle-left(aria-hidden='true')
+	a.right.carousel-control(data-target="#carousel-header" role="button" data-slide='next')
+		span.fa.fa-angle-right(aria-hidden='true')

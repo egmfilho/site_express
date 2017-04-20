@@ -23,8 +23,8 @@
     "angular-touch": "^1.6.2",
     "font-awesome": "^4.7.0",
     "angular-i18n": "^1.6.2",
-    "ng-parallax": "^0.1.8",
-    "ngmap": "^1.18.4"
+    "ngmap": "^1.18.4",
+    "ng-simple-parallax": "*"
   },
   "overrides": {
     "angular-i18n": {
@@ -36,6 +36,9 @@
       "main": [
         "css/font-awesome.css"
       ]
+    },
+    "ng-simple-parallax": {
+      "main": "src/ngParallax.min.js"
     }
   },
   "devDependencies": {

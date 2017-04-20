@@ -1,7 +1,7 @@
 'use script';
 
 angular.module('siteExpress.controllers')
-	.controller('ContactCtrl', ['$scope', '$window', 'Strings', 'NgMap', function($scope, $window, Strings, NgMap) {
+	.controller('ContactCtrl', ['$scope', 'Strings', 'NgMap', function($scope, Strings, NgMap) {
 	
 		var self = this;
 
@@ -16,11 +16,7 @@ angular.module('siteExpress.controllers')
 
 		$scope.$on('$viewContentLoaded', function() {
 			setTimeout(function() {
-				if ($window.innerWidth >= 768) {
-					jQuery('#map').css('height', jQuery('.form-contact').outerHeight());
-				} else {
-					jQuery('#map').css('height', 400);
-				}
+				jQuery('#map').css('height', jQuery('.form-contact').outerHeight());
 			}, 100);
 		});
 

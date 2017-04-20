@@ -1,5 +1,5 @@
 .container
-	.row
+	.row.offset-top-60.offset-bottom-60
 		.col-xs-12.col-sm-6.col-md-4
 			.row.form-contact
 				.col-xs-12
@@ -31,7 +31,7 @@
 						span.fa.fa-send-o
 						|  Enviar
 
-		.col-xs-12.col-sm-6.col-md-8.map-container
+		.col-xs-12.col-sm-6.col-md-8
 			ng-map#map(default-style="false" center='{{lattitude}},{{longitude}}' zoom='15' scrollwheel='false')
 				marker(id='#marker' position='{{lattitude}},{{longitude}}' on-click='contact.map.showInfoWindow("#info-window")')
 				info-window(id='#info-window' visible-on-marker='#marker')
