@@ -17,28 +17,17 @@ nav.navbar.navbar-default.navbar-fixed-top(ng-class='{"retreat": currentPath != 
 #carousel-header.carousel.slide(data-ride='carousel' ng-show='currentPath == "/"')
 	//- Wrapper for slides
 	.carousel-inner(role='listbox')
-		.item.active
+		.item(ng-repeat="slide in strings.header.carousel.slides track by $index" ng-class='{"active": $index == 0}')
 			div
-				.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')
+				.picture(ng-parallax pattern="slide['image-url']" speed='0')
 				.cover
 					h2.title.text-center
-						| Hello Template!
+						| {{slide.title}}
 					p.subtitle.text-center
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						| {{slide.subtitle}}
 					p.text-center
-						a.btn.btn-default.btn-lg.btn-outline.text-white(href='/sobre') 
-							| Ver mais
-		.item
-			div
-				.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')
-				.cover
-					h2.title.text-center
-						| Hello Template!
-					p.subtitle.text-center
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					p.text-center
-						a.btn.btn-default.btn-lg.btn-outline.text-white(href='/sobre') 
-							| Ver mais
+						a.btn.btn-primary.btn-lg.btn-outline.text-white(ng-href='{{slide.button.href}}' ng-if='slide.button.enabled') 
+							| {{slide.button.caption}}
 
 	//- Controls
 	a.left.carousel-control(data-target="#carousel-header" role="button" data-slide='prev')

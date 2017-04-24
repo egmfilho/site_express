@@ -43,6 +43,13 @@ angular.module('siteExpress', [
 				controllerAs: 'about',
 				resolve: resolve
 			})
+			.when('/servicos-produtos', {
+				name: 'works',
+				templateUrl: 'views/works.html',
+				controller: 'WorksCtrl',
+				controllerAs: 'works',
+				resolve: resolve
+			})
 			.when('/contato', {
 				name: 'contact',
 				templateUrl: 'views/contact.html',

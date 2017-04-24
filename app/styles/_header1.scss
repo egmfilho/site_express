@@ -148,9 +148,11 @@ nav.navbar {
 				a.btn {
 					margin-top: 15px;
 
+					border-color: white;
+					color: white;
+
 					&:hover {
-						border-color: $main-color-light;
-						color: $main-color-light;
+						border-color: $main-color-darker;
 					}
 
 					@media (min-width: $screen-sm-min) {

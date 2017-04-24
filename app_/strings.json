@@ -85,17 +85,20 @@
 				}
 			}
 		},
-		"contact": {
+		"contact": {			
 			"title": "Entre em contato",
-			"address": {
-				"name": "Lorem ipsum",
-				"line1": "Rua Suspendisse Urna Leo, 330",
-				"line2": "Bairro - Cidade - RJ",
-				"line3": "Tel: (21) 2222-3333"
-			},
-			"lattitude": "-22.415787",
-			"longitude": "-42.971796",
+			"map": {
+				"address": {
+					"name": "Lorem ipsum",
+					"line1": "Rua Suspendisse Urna Leo, 330",
+					"line2": "Bairro - Cidade - RJ",
+					"line3": "Tel: (21) 2222-3333"
+				},
+				"lattitude": "-22.415787",
+				"longitude": "-42.971796"
+			},			
 			"form": {
+				"title": "Fale conosco",
 				"field1": {
 					"name": "Nome",
 					"required": true,

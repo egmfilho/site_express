@@ -1,10 +1,17 @@
+.page-title(ng-style='{"background-image": "url({{strings.pages.contact.cover}})"}')
+	.cover
+	.container
+		.title
+			h1.text-white
+				| {{strings.pages.contact.title}}
+
 .container
 	.row
 		.col-xs-12.col-sm-6.col-md-4
 			.row.form-contact
 				.col-xs-12
 					h2.text-light
-						| {{strings.pages.contact.title}}
+						| {{strings.pages.contact.form.title}}
 				
 				.col-xs-12.offset-top-30(ng-if='strings.pages.contact.form.field1.active')
 					h4.text-light
@@ -36,7 +43,7 @@
 				marker(id='#marker' position='{{lattitude}},{{longitude}}' on-click='contact.map.showInfoWindow("#info-window")')
 				info-window(id='#info-window' visible-on-marker='#marker')
 					div(ng-non-bindable='')
-						h4.text-gray-dark {{strings.pages.contact.address.name}}
-						p.text-gray-dark {{strings.pages.contact.address.line1}}
-						p.text-gray-dark {{strings.pages.contact.address.line2}}
-						p.text-gray-dark {{strings.pages.contact.address.line3}}
+						h4.text-gray-dark {{strings.pages.contact.map.address.name}}
+						p.text-gray-dark {{strings.pages.contact.map.address.line1}}
+						p.text-gray-dark {{strings.pages.contact.map.address.line2}}
+						p.text-gray-dark {{strings.pages.contact.map.address.line3}}

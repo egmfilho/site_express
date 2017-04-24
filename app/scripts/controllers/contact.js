@@ -11,8 +11,8 @@ angular.module('siteExpress.controllers')
 			self.map = map;
 		});
 
-		$scope.lattitude = $scope.strings.pages.contact.lattitude;
-		$scope.longitude = $scope.strings.pages.contact.longitude;
+		$scope.lattitude = $scope.strings.pages.contact.map.lattitude;
+		$scope.longitude = $scope.strings.pages.contact.map.longitude;
 
 		$scope.$on('$viewContentLoaded', function() {
 			setTimeout(function() {

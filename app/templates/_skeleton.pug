@@ -16,7 +16,7 @@ html
 		link(rel='stylesheet' href='styles/vendor.min.css')
 		link(rel='stylesheet' href='styles/main.css')
 
-	body(ng-app='siteExpress')
+	body(ng-app='siteExpress' ng-class='{"nav-margin": currentPath != "/"}')
 
 		block header
 
