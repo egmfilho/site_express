@@ -150,25 +150,27 @@
 			},			
 			"form": {
 				"title": "Fale conosco",
-				"field1": {
-					"name": "Nome",
+				"fields": [{
+					"label": "Nome",
+					"name": "name",
+					"type": "text",
 					"required": true,
-					"active": true
-				},
-				"field2": {
-					"name": "Cidade",
+					"enabled": true
+				}, {
+					"label": "Cidade",
+					"name": "city",
+					"type": "text",
 					"required": true,
-					"active": true
-				},
-				"field3": {
-					"name": "Email",
+					"enabled": true
+				}, {
+					"label": "Email",
+					"name": "email",
+					"type": "email",
 					"required": true,
-					"active": true
-				},
+					"enabled": true
+				}],
 				"message-field": {
-					"name": "Mensagem",
-					"required": true,
-					"active": true
+					"name": "Mensagem"
 				}
 			}
 		}

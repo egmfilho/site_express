@@ -14,6 +14,10 @@ angular.module('siteExpress.controllers')
 		$scope.lattitude = $scope.strings.pages.contact.map.lattitude;
 		$scope.longitude = $scope.strings.pages.contact.map.longitude;
 
+		this.submit = function() {
+			alert('lepo lepo');
+		};
+
 		$scope.$on('$viewContentLoaded', function() {
 			setTimeout(function() {
 				if ($window.innerWidth >= 768) {
@@ -22,6 +26,23 @@ angular.module('siteExpress.controllers')
 					jQuery('#map').css('height', 400);
 				}
 			}, 100);
+		});
+
+		jQuery('form').on('submit', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			jQuery.ajax({
+				url: 'contact.php',
+				method: 'POST',
+				dataType: 'json',
+				data: jQuery('form').serialize(),
+				success: function(data) {
+
+				},
+				error: function(data) {
+
+				}
+			});
 		});
 
 	}]);

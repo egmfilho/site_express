@@ -126,7 +126,7 @@ nav.navbar {
 				opacity: 0;
 				background-color: rgba(#000, .4);
 
-				@include transition(opacity 1.5s);
+				@include transition(opacity 2.5s);
 
 				.title {
 					font-size: 40px;	
