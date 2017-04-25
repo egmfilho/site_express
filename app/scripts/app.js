@@ -68,7 +68,7 @@ angular.module('siteExpress', [
 			count: 0,
 			isLoading: function() { return this.count > 0 },
 			load: function() { this.count++; },
-			unload: function() { this.count--; this.count < 0 ? this.count = 0 : null }
+			unload: function() { this.count = Math.max(this.count - 1, 0); }
 		};
 
 		$rootScope.$on('$routeChangeStart', function(event, next, current) {

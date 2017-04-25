@@ -13,6 +13,19 @@ nav.navbar.navbar-default.navbar-fixed-top
 			ul.nav.navbar-nav
 				li(ng-repeat='item in strings.header.navbar.items track by $index' ng-class='{"active": $index == 0}' name='{{item.name}}')
 					a(ng-href='{{item.href}}') {{item.title}}
+			ul.nav.navbar-nav.navbar-right
+				li.text-center
+					a.social(ng-href='{{strings.website.facebook}}' target='_blank' ng-if='strings.website.facebook')
+						i.fa.fa-facebook
+
+					a.social(ng-href='{{strings.website.twitter}}' target='_blank' ng-if='strings.website.twitter')
+						i.fa.fa-twitter
+
+					a.social(ng-href='{{strings.website["google-plus"]}}' target='_blank' ng-if='strings.website["google-plus"]')
+						i.fa.fa-google-plus
+
+					a.social(ng-href='{{strings.website.youtube}}' target='_blank' ng-if='strings.website.youtube')
+						i.fa.fa-youtube
 
 .outdoor(ng-show='currentPath == "/"')
 	.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')

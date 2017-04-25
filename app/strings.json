@@ -2,12 +2,20 @@
 	"website": {		
 		"title": "Lorem Ipsum",
 		"logo-url": "",
-		"contact-mail": [{
-			"name": "contato",
-			"email": "contato@email.com"
+		"contact_mail": [{
+			"name": "Eduardo",
+			"mail": "edumig12@hotmail.com"
 		}],
+		"phone": {
+			"icon": "fa-phone",
+			"number": "(21) 99999-8888"			
+		},
 		"gmaps-api-key": "AIzaSyAweoS6Re-3ct3tPGEhRW94VsKY8nmZT9E",
-		"main-color": "FF0000"
+		"main-color": "FF0000",
+		"facebook": "www.facebook.com",
+		"twitter": "",
+		"google-plus": "",
+		"youtube": "https://www.youtube.com/watch?v=B8NXB7zAbmg"
 	},
 	"header": {
 		"navbar": {
@@ -146,7 +154,7 @@
 					"required": true,
 					"enabled": true
 				}],
-				"message-field": {
+				"message_field": {
 					"name": "Mensagem"
 				}
 			}

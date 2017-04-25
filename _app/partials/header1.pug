@@ -13,6 +13,18 @@ nav.navbar.navbar-default.navbar-fixed-top(ng-class='{"retreat": currentPath != 
 			ul.nav.navbar-nav.navbar-right
 				li(ng-repeat='item in strings.header.navbar.items track by $index' ng-class='{"active": $index == 0}' name='{{item.name}}')
 					a(ng-href='{{item.href}}') {{item.title}}
+				li.text-center
+					a.social(ng-href='{{strings.website.facebook}}' target='_blank' ng-if='strings.website.facebook')
+						i.fa.fa-facebook
+
+					a.social(ng-href='{{strings.website.twitter}}' target='_blank' ng-if='strings.website.twitter')
+						i.fa.fa-twitter
+
+					a.social(ng-href='{{strings.website["google-plus"]}}' target='_blank' ng-if='strings.website["google-plus"]')
+						i.fa.fa-google-plus
+
+					a.social(ng-href='{{strings.website.youtube}}' target='_blank' ng-if='strings.website.youtube')
+						i.fa.fa-youtube
 
 #carousel-header.carousel.slide(data-ride='carousel' ng-show='currentPath == "/"')
 	//- Wrapper for slides

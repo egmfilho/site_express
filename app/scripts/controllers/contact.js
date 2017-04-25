@@ -2,13 +2,11 @@
 
 angular.module('siteExpress.controllers')
 	.controller('ContactCtrl', ['$rootScope', '$scope', '$window', 'Strings', 'NgMap', function($rootScope, $scope, $window, Strings, NgMap) {
-	
-		var self = this;
 
 		$scope.strings = Strings.getData();
 
 		NgMap.getMap().then(function(map) {
-			self.map = map;
+			$scope.map = map;
 		});
 
 		$scope.lattitude = $scope.strings.pages.contact.map.lattitude;
@@ -32,11 +30,12 @@ angular.module('siteExpress.controllers')
 				dataType: 'json',
 				data: jQuery('form').serialize(),
 				success: function(data) {
-					console.log('forévis');
 					$rootScope.loading.unload();
+					$scope.$apply();
 				},
 				error: function(data) {
 					$rootScope.loading.unload();
+					$scope.$apply();
 				}
 			});
 		});

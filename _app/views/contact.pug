@@ -20,7 +20,7 @@
 
 				.col-xs-12.offset-top-15
 					h4.text-light
-						| {{strings.pages.contact.form['message-field'].name}}
+						| {{strings.pages.contact.form['message_field'].name}}
 					textarea.form-control(type='text' rows='8' name='message' required='true')
 
 				.col-xs-12.offset-top-30
@@ -30,8 +30,8 @@
 
 		.col-xs-12.col-sm-6.col-md-8.map-container
 			ng-map#map(default-style="false" center='{{lattitude}},{{longitude}}' zoom='15' scrollwheel='false')
-				marker(id='#marker' position='{{lattitude}},{{longitude}}' on-click='contact.map.showInfoWindow("#info-window")')
-				info-window(id='#info-window' visible-on-marker='#marker')
+				marker#marker(position='{{lattitude}},{{longitude}}' on-click='map.showInfoWindow("info-window")')
+				info-window#info-window(visible-on-marker='marker')
 					div(ng-non-bindable='')
 						h4.text-gray-dark {{strings.pages.contact.map.address.name}}
 						p.text-gray-dark {{strings.pages.contact.map.address.line1}}
