@@ -12,6 +12,21 @@
 		@media (min-width: $screen-sm-min) {
 			margin-top: 0;
 		}
+
+		.icon {
+			display: block;
+			margin: 0 auto;
+			width: 130px;
+			height: 130px;
+			background-color: $main-color;
+			color: white;			
+			text-align: center;
+			border-radius: 50%;
+
+			.fa {
+				line-height: 130px;
+			}
+		}
 	}
 }
 

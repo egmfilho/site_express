@@ -1,7 +1,7 @@
 'use script';
 
 angular.module('siteExpress.controllers')
-	.controller('ContactCtrl', ['$rootScope', '$scope', '$window', 'Strings', 'NgMap', function($rootScope, $scope, $window, Strings, NgMap) {
+	.controller('ContactCtrl', ['$scope', '$window', 'Strings', 'NgMap', function($scope, $window, Strings, NgMap) {
 	
 		var self = this;
 
@@ -15,28 +15,28 @@ angular.module('siteExpress.controllers')
 		$scope.longitude = $scope.strings.pages.contact.map.longitude;
 
 		$scope.$on('$viewContentLoaded', function() {
-			if ($window.innerWidth >= 768) {
-				setTimeout(function() {
+			setTimeout(function() {
+				if ($window.innerWidth >= 768) {
 					jQuery('#map').css('height', jQuery('.form-contact').outerHeight());
-				}, 100);
-			}
+				} else {
+					jQuery('#map').css('height', 400);
+				}
+			}, 100);
 		});
 
 		jQuery('form').on('submit', function(e) {
 			e.stopPropagation();
 			e.preventDefault();
-			$rootScope.loading.load();
 			jQuery.ajax({
-				url: './external/mail.php',
+				url: 'mail.php',
 				method: 'POST',
 				dataType: 'json',
 				data: jQuery('form').serialize(),
 				success: function(data) {
-					console.log('forévis');
-					$rootScope.loading.unload();
+
 				},
 				error: function(data) {
-					$rootScope.loading.unload();
+
 				}
 			});
 		});

@@ -135,6 +135,10 @@
 
 .btn.btn-outline {
 	background-color: transparent;
+
+	&:active:focus {
+		background-color: transparent;
+	}
 	
 	&.btn-primary {
 		color: $brand-primary;

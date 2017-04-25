@@ -1,37 +1,34 @@
+.page-title(ng-style='{"background-image": "url({{strings.pages.contact.cover}})"}')
+	.cover
+	.container
+		.title
+			h1.text-white
+				| {{strings.pages.contact.title}}
+
 .container
-	.row.offset-top-60.offset-bottom-60
+	.row
 		.col-xs-12.col-sm-6.col-md-4
-			.row.form-contact
+			form.row.form-contact(name='contact' method='POST')
 				.col-xs-12
 					h2.text-light
 						| {{strings.pages.contact.form.title}}
 				
-				.col-xs-12.offset-top-30(ng-if='strings.pages.contact.form.field1.active')
+				#fields.col-xs-12.offset-top-15(ng-repeat='field in strings.pages.contact.form.fields' ng-if='field.enabled')
 					h4.text-light
-						| {{strings.pages.contact.form.field1.name}}
-					input.form-control(type='text')
-				
-				.col-xs-12.offset-top-15(ng-if='strings.pages.contact.form.field2.active')
-					h4.text-light
-						| {{strings.pages.contact.form.field2.name}}
-					input.form-control(type='text')
+						| {{field.label}}
+					input.form-control(type='{{field.type}}' name='{{field.name}}' ng-required='{{field.required}}')
 
-				.col-xs-12.offset-top-15(ng-if='strings.pages.contact.form.field3.active')
-					h4.text-light
-						| {{strings.pages.contact.form.field3.name}}
-					input.form-control(type='text')
-
-				.col-xs-12.offset-top-15(ng-if='strings.pages.contact.form[\'message-field\'].active')
+				.col-xs-12.offset-top-15
 					h4.text-light
 						| {{strings.pages.contact.form['message-field'].name}}
-					textarea.form-control(type='text' rows='8')
+					textarea.form-control(type='text' rows='8' name='message' required='true')
 
 				.col-xs-12.offset-top-30
-					button.btn.btn-primary.btn-block.btn-lg(type='button') 
+					button.btn.btn-primary.btn-block.btn-lg(type='submit') 
 						span.fa.fa-send-o
 						|  Enviar
 
-		.col-xs-12.col-sm-6.col-md-8
+		.col-xs-12.col-sm-6.col-md-8.map-container
 			ng-map#map(default-style="false" center='{{lattitude}},{{longitude}}' zoom='15' scrollwheel='false')
 				marker(id='#marker' position='{{lattitude}},{{longitude}}' on-click='contact.map.showInfoWindow("#info-window")')
 				info-window(id='#info-window' visible-on-marker='#marker')
