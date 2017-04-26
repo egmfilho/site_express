@@ -1,0 +1,58 @@
+#carousel-home.carousel.slide(data-ride='carousel')
+	//- Indicators
+	ol.carousel-indicators
+		li(data-target='#carousel-home' data-slide-to='{{$index}}' ng-class='{"active": $index === 0}' ng-repeat='n in getNumber(strings.pages.home.carousel.slides.length) track by $index')
+
+	//- Wrapper for Slides
+	.carousel-inner(role='listbox')
+		.item(ng-class='{"active": $index === 0}' ng-repeat='slide in strings.pages.home.carousel.slides track by $index')
+			.cover
+				div 
+					h2 {{slide.title}}
+					p {{slide.subtitle}}
+			.picture(ng-style='{"background-image": "url(" + slide["image-url"] + ")"}')
+
+	//- Controls
+	a.left.carousel-control(data-target='#carousel-home' role='button' data-slide='prev')
+		span.glyphicon.glyphicon-chevron-left
+	a.right.carousel-control(data-target='#carousel-home' role='button' data-slide='next')
+		span.glyphicon.glyphicon-chevron-right
+
+.container
+	.row.offset-top-60
+		.col-xs-12
+			.h2.text-lg.text-cursive.text-center {{strings.pages.home['about-us'].title}}
+			.separator
+			p.text-center.text-sans.text-sm.text-light {{strings.pages.home['about-us'].subtitle}}
+	
+	.row.offset-top-60
+		.col-xs-12.col-sm-4.text-center.offset-bottom-30(ng-repeat='item in strings.pages.home["about-us"].items')
+			i.icon-lg.fill-icon.fa(ng-class='item.icon')
+			h3.offset-top-30 {{item.title}}
+
+		.col-xs-12.offset-top-30.text-center(ng-if='strings.pages.home["about-us"].button.enabled')
+			a.btn.btn-primary.btn-lg.btn-outline.offset-top-15(ng-href='{{strings.pages.home["about-us"].button.href}}') {{strings.pages.home['about-us'].button.caption}}
+
+.parallax-container.offset-top-60
+	//- .picture(ng-parallax pattern='strings.pages.home.banner["image-url"]' speed='0')
+	.picture(ng-style='{"background-image": "url(../images/parallax-bg.jpg)"}' style='width: 100%; height: 100%')
+	.cover.text-center.text-white
+		i.icon-lg.fa(ng-class='strings.pages.home.banner.icon')
+		h2.text-lg.offset-top-30 {{strings.pages.home.banner.title}}
+		p.text-sans.text-md {{strings.pages.home.banner.subtitle}}
+		.separator.separator-white.separator-lg
+		p.text-sans.text-sm {{strings.pages.home.banner.text}}
+
+.container.testimonials
+	.row.offset-top-60
+		.col-xs-12
+			.h2.text-lg.text-cursive.text-center {{strings.pages.home.quotes.title}}
+			.separator
+			p.text-center.text-sans.text-sm.text-light {{strings.pages.home.quotes.title}}
+
+	.row.offset-top-60
+		.col-xs-12.col-sm-6.text-center.offset-bottom-60(ng-repeat='quote in strings.pages.home.quotes.items')
+			i.icon-lg.fa.fa-quote-left
+			p.text-light.text-sm.offset-top-30 {{quote.text}}
+			h3.text-sans {{quote.author}}
+			p.text-sans.text-sm {{quote.role}}

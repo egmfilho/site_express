@@ -1,0 +1,30 @@
+.page-header(ng-style='{"background-image": "url(" + strings.pages.about.cover + ")"}')
+	.cover
+	.container
+		.row
+			.col-xs-12
+				h1.text-white.text-xlg {{strings.pages.about.title}}
+
+.container
+	.row.offset-top-30
+		.col-xs-12
+			h2.text-center.text-lg {{strings.pages.about.topics.title}}
+			p.text-center.text-sans.text-sm.text-light {{strings.pages.about.topics.subtitle}}
+	
+	.row.offset-top-60.offset-bottom-60
+		.col-xs-12.col-sm-4.text-center.offset-bottom-30(ng-repeat='topic in strings.pages.about.topics.items')
+			i.icon-lg.fill-icon.fa(ng-class='topic.icon')
+			h3.offset-top-30 {{topic.title}}
+			p.text-light.text-sm.offset-top-15 {{topic.text}}
+
+	.row
+		.col-xs-12
+			.separator.separator-lg
+
+	.row.offset-top-30.offset-bottom-60
+		.col-xs-12
+			h2.text-center.text-lg {{strings.pages.about.paragraph.title}}
+			p.text-center.text-sans.text-sm.text-light.offset-bottom-60  {{strings.pages.about.paragraph.subtitle}}
+			
+			p.text-sm.text-light.offset-bottom-60
+				| {{strings.pages.about.paragraph.text}}

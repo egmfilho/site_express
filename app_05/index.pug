@@ -1,0 +1,32 @@
+extends ./templates/_skeleton.pug
+
+block header	
+		nav.navbar.navbar-default.navbar-fixed-top(ng-init='scrollY = 0' ng-class='{"navbar-translucid": currentPath === "/" && scrollY < 1}')
+			.container(ng-controller='HeaderCtrl')
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar-classeA')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='/')
+						img.img-responsive(ng-src='{{strings.website["main-logo-url"]}}')
+
+				#navbar-classeA.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li(ng-repeat='item in strings.header.navbar.items track by $index' ng-class='{"active": $index == 0}' name='{{item.name}}')
+							a(ng-href='{{item.href}}') {{item.title}}
+block page
+	div(ng-view='' autoscroll)
+
+block footer
+	.footer
+		.container(ng-controller='FooterCtrl')
+			.row.text-white
+				.col-xs-12.col-sm-6
+					a(href='/')
+						img.img-responsive(ng-src='{{strings.website["alternative-logo-url"]}}')
+				.col-xs-12.col-sm-6.text-center.sign
+					p {{strings.footer.signature}}  
+						a(href='http://www.futuraagencia.com.br' target='_blank')
+							i.fa.fa-cube
+							|  Futura Agência

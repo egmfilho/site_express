@@ -1,0 +1,44 @@
+.page-header(ng-style='{"background-image": "url(" + strings.pages.contact.cover + ")"}')
+	.cover
+	.container
+		.row
+			.col-xs-12
+				h1.text-white.text-xlg {{strings.pages.contact.title}}
+
+.container
+	.row.offset-bottom-60
+		.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+			form.row.form-contact(name='contact' method='POST')
+				.col-xs-12
+					h2.text-lg.text-center.text-sans.offset-top-60 {{strings.pages.contact.form.title}}
+					p.text-light.text-sm.text-center.offset-bottom-60
+						| {{strings.pages.contact.form.subtitle}}
+
+				.fields.col-xs-12.offset-top-15(ng-repeat='field in strings.pages.contact.form.fields' ng-if='field.enabled')
+					h4.text-light
+						| {{field.label}}
+					input.form-control(type='{{field.type}}' name='{{field.name}}' ng-required='{{field.required}}')
+
+				.col-xs-12.offset-top-15
+					h4.text-light
+						| {{strings.pages.contact.form['message_field'].name}}
+					textarea.form-control(type='text' rows='8' name='message' required='true')
+
+				.col-xs-12.col-sm-push-8.col-sm-4
+					button.btn.btn-primary.btn-lg.btn-block.offset-top-30(type='submit')
+						i.fa.fa-send
+						|  Enviar
+
+	.row
+		.col-xs-12
+			h2.text-lg.text-sans.text-center.offset-top-60 Estamos aqui
+
+ng-map#map(default-style="true" center='{{lattitude}},{{longitude}}' zoom='15' scrollwheel='false')
+	marker#marker(position='{{lattitude}},{{longitude}}' on-click='map.showInfoWindow("info-window")')
+	info-window#info-window(visible-on-marker='marker')
+		div(ng-non-bindable='')
+			h4.text-gray-dark {{strings.pages.contact.map.address.name}}
+			p.text-gray-dark {{strings.pages.contact.map.address.line1}}
+			p.text-gray-dark {{strings.pages.contact.map.address.line2}}
+			p.text-gray-dark {{strings.pages.contact.map.address.line3}}J
+			p Tel: (21) 2741-1284

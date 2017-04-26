@@ -1,0 +1,189 @@
+{
+	"website": {		
+		"title": "Lorem Ipsum",		
+		"contact_mail": [{
+			"name": "contato",
+			"mail": "contato@email.com"
+		}],
+		"phone": {
+			"icon": "fa-phone",
+			"number": "(21) 99999-8888"			
+		},
+		"gmaps-api-key": "AIzaSyAweoS6Re-3ct3tPGEhRW94VsKY8nmZT9E",
+		"main-color": "FF0000",
+		"main-logo-url": "../images/logo.png",
+		"alternative-logo-url": "../images/logo.png"
+	},
+	"header": {
+		"navbar": {
+			"items": [{
+					"title": "Home",
+					"name": "home",
+					"href": "#/"
+				}, {
+					"title": "Sobre",
+					"name": "about",
+					"href": "#/sobre"
+				}, {
+					"title": "Serviços",
+					"name": "works",
+					"href": "#/servicos-produtos"
+				}, {
+					"title": "Contato",
+					"name": "contact",
+					"href": "#/contato"
+				}]
+		}
+	},
+	"footer": {
+		"signature": "© 2017 Lorem Ipsum - Todos os direitor reservados"
+	},
+	"pages": {
+		"home": {
+			"carousel": {
+				"slides": [{
+					"image-url": "../images/slides/slide1.jpg",
+					"title": "Lorem Ipsum",
+					"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}, {
+					"image-url": "../images/slides/slide2.jpg",
+					"title": "Lorem Ipsum 2",
+					"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}, {
+					"image-url": "../images/slides/slide3.jpg",
+					"title": "Lorem Ipsum 3",
+					"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				}]
+			},
+			"about-us": {
+				"title": "Interdum et malesuada",
+				"subtitle": "Pellentesque rhoncus, purus mattis malesuada mollis, nibh eros blandit eros",
+				"items": [{
+					"icon": "fa-user-o",
+					"title": "Nullam aliquet"
+				}, {
+					"icon": "fa-send-o",
+					"title": "Suspendisse ac sapien"
+				}, {
+					"icon": "fa-envelope-open-o",
+					"title": "Duis suscipit"
+				}],
+				"button": {
+					"caption": "Ver mais",
+					"href": "#/sobre",
+					"enabled": true
+				}
+			},
+			"banner": {
+				"image-url": "../images/parallax-bg.jpg",
+				"icon": "fa-group",
+				"title": "Lorem Ipsum",
+				"subtitle": "Sed sed luctus massa, ac viverra lorem.",
+				"text": "Etiam eu nibh non libero interdum rutrum quis non diam. Sed semper massa tortor, ac pellentesque risus euismod ac. Aenean facilisis nunc tortor, efficitur rutrum lectus porta eget. Nullam maximus massa aliquet nibh vulputate maximus."
+			},
+			"quotes": {
+				"title": "Duis porttitor mattis odio",
+				"subtitle": "Maecenas sit amet nisi quis odio pellentesque varius",
+				"items": [
+					{
+						"text": "Aenean in elit tempor, finibus felis eget, semper ante. Nam vulputate pulvinar venenatis. Pellentesque rhoncus, purus mattis malesuada mollis, nibh eros blandit eros, non mollis turpis tellus et erat. Fusce iaculis nibh mauris, nec tincidunt turpis posuere ac. Vestibulum eu justo vel purus auctor cursus vitae quis ex. Suspendisse fringilla tortor ex, viverra hendrerit quam condimentum nec. Suspendisse sed vestibulum dolor.",
+						"author": "Tony Ramos",
+						"role": "Cliente"
+					}, {
+						"text": "Fusce enim leo, sagittis vitae tempor vitae, dapibus nec arcu. Donec faucibus urna neque, ac convallis metus placerat placerat. Suspendisse tincidunt condimentum massa a porta. Donec suscipit sagittis ante, eu dictum turpis volutpat sit amet. Donec massa orci, efficitur nec auctor eu, venenatis vel risus. Vestibulum ullamcorper ut nibh quis ultrices. Etiam feugiat risus ac justo molestie, fermentum mollis lectus vulputate.",
+						"author": "Fausto Silva",
+						"role": "Cliente"
+					}
+				]
+			}
+		},
+		"about": {
+			"cover": "../images/banner-about.jpg",
+			"title": "Sobre a empresa",
+			"topics": {
+				"title": "",
+				"subtitle": "",
+				"items": [{
+						"icon": "fa-user-o",
+						"title": "Nullam aliquet",
+						"text": "Nulla id augue posuere, efficitur orci ac, ultricies elit. Etiam eu nibh non libero interdum rutrum quis non diam. Sed semper massa tortor, ac pellentesque risus euismod ac."
+					}, {
+						"icon": "fa-send-o",
+						"title": "Suspendisse ac sapien",
+						"text": "Pellentesque ac purus varius, auctor purus sed, blandit lacus. Integer ante sapien, malesuada quis erat id, ultricies varius neque. Nullam tristique diam eget imperdiet ultricies."
+					}, {
+						"icon": "fa-envelope-open-o",
+						"title": "Duis suscipit",
+						"text": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vitae risus erat. Duis porttitor mattis odio. Maecenas sit amet nisi quis odio pellentesque varius. Donec congue ultrices diam bibendum congue."
+					}]
+			},
+			"paragraph": {
+				"title": "Lorem ipsum dolor sit amet",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"text": "Maecenas sit amet nisi quis odio pellentesque varius. Donec congue ultrices diam bibendum congue. Duis laoreet mi at cursus sagittis. Aliquam hendrerit magna id justo faucibus, vel pharetra metus congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent sodales massa odio. Integer fermentum justo ut auctor consectetur. Nulla bibendum interdum metus, non dapibus massa consectetur a. Morbi volutpat suscipit leo. In sed sem vel mauris tempus porta. Vivamus aliquet mattis diam, quis congue nunc egestas quis." 
+			}			
+		},
+		"works": {
+			"cover": "../images/banner-products.png",
+			"title": "Serviços & Produtos",
+			"services": {
+				"title": "Lorem Ipsum",
+				"items": [
+					{
+						"image-url": "../images/products/picture1.jpg",
+						"title": "Morbi semper turpis ex",
+						"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+					}, {
+						"image-url": "../images/products/picture2.jpg",
+						"title": "Morbi semper turpis ex 2",
+						"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+					}, {
+						"image-url": "../images/products/picture3.jpg",
+						"title": "Morbi semper turpis ex 3",
+						"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+					}
+				]
+			}
+		},
+		"contact": {
+			"cover": "../images/banner-contact.jpg",
+			"title": "Contato",
+			"form": {
+				"title": "Mensagem",
+				"subtitle": "Nam vulputate pulvinar venenatis. Pellentesque rhoncus, purus mattis malesuada mollis, nibh eros blandit eros, non mollis turpis tellus et erat.",
+				"fields": [{
+						"label": "Nome",
+						"name": "name",
+						"type": "text",
+						"required": true,
+						"enabled": true
+					}, {
+						"label": "Cidade",
+						"name": "city",
+						"type": "text",
+						"required": true,
+						"enabled": true
+					}, {
+						"label": "Email",
+						"name": "email",
+						"type": "email",
+						"required": true,
+						"enabled": true
+					}],
+				"message_field": {
+					"name": "Mensagem"
+				}
+			},
+			"map": {
+				"address": {
+					"name": "Lorem ipsum",
+					"line1": "Rua Suspendisse Urna Leo, 330",
+					"line2": "Bairro - Cidade - RJ",
+					"line3": "Tel: (21) 2222-3333"
+				},
+				"lattitude": "-22.415787",
+				"longitude": "-42.971796"
+			}
+		}
+	}
+}
