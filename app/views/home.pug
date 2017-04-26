@@ -2,21 +2,20 @@
 	.col-xs-12.paragraph
 		h2.text-light.text-lg.text-center
 			| {{strings.pages.home.paragraph.title}}
-		p.text-sm.text-line-spacing.text-light.text-gray.text-center.offset-top-30
+		.separator.separator-lg
+		p.text-sm.text-line-spacing.text-light.text-gray.text-center
 			| {{strings.pages.home.paragraph.subtitle}}
 
 .topics.offset-top-60
 	.container.offset-top-60.offset-bottom-60
 		.row
 			.col-xs-12.col-sm-4.topic(ng-repeat='topic in strings.pages.home.topics')
-				.row
-					.col-xs-2
-						i.fa.icon-md.text-primary(ng-class='topic.icon')
-					.col-xs-10
-						h4.text-md.text-light
-							| {{topic.title}}
-						p.text-sm.text-line-spacing.text-light.text-gray.offset-top-30
-							| {{topic.text}}
+				.icon
+					i.fa.icon-lg(ng-class='topic.icon')
+				h4.text-md.text-light.text-center.offset-top-30
+					| {{topic.title}}
+				p.text-sm.text-line-spacing.text-light.text-gray.offset-top-30
+					| {{topic.text}}
 
 .container.offset-top-60
 	.col-xs-12.quote

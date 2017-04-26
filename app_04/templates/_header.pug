@@ -1,0 +1,34 @@
+block header
+	div(ng-controller='HeaderCtrl')
+		.header-banner.hidden-xs(ng-style='{"background-image": "url(" + strings.header.navbar["main-logo-url"] + ")"}')
+		nav.navbar.navbar-default
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(data-toggle='collapse' data-target='#navbar-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='/') 
+						div(ng-style='{"background-image": "url(" + strings.header.navbar["alternative-logo-url"] + ")"}')
+
+				#navbar-collapse.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-center
+						li(ng-repeat='item in strings.header.navbar.items track by $index' name='{{item.name}}')
+							a(ng-href='{{item.href}}') {{item.title}}
+
+					ul.nav.navbar-nav.navbar-right
+						li.contact(ng-if='strings.website.facebook')
+							a(ng-href='{{strings.website.facebook}}' target='_blank')
+								i.fa.fa-facebook
+
+						li.contact(ng-if='strings.website.twitter')
+							a(ng-href='{{strings.website.twitter}}' target='_blank')
+								i.fa.fa-twitter
+
+						li.contact(ng-if='strings.website["google-plus"]')
+							a(ng-href='{{strings.website["google-plus"]}}' target='_blank')
+								i.fa.fa-google-plus
+
+						li.contact(ng-if='strings.website.youtube')
+							a(ng-href='{{strings.website.youtube}}' target='_blank')
+								i.fa.fa-youtube

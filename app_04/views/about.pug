@@ -1,0 +1,19 @@
+.row
+	#dark-banner.banner-small
+		.cover-background.dark(ng-style='{"background-image": "url(" + strings.pages.about.cover + ")"}')
+		.foreground
+			h1.section-header.text-xlg.text-center.text-white.offset-top-60 {{strings.pages.about.title}}
+			p.section-subheader.text-center.text-sm.text-white.offset-bottom-30
+				| {{strings.pages.about.subtitle}}
+
+#about.container.offset-top-60.offset-bottom-60
+	.row
+		.col-xs-12.col-md-6(ng-repeat='paragrah in strings.pages.about.paragraphs.items')
+			.row.offset-top-30
+				.col-sm-12
+					.thumb
+						img.img-responsive.img-circle(ng-src='{{paragrah["image-url"]}}')
+				.col-sm-12
+					.description
+						p.text-center.text-md.offset-top-30 {{paragrah.title}}
+						p.text-center {{paragrah.text}}

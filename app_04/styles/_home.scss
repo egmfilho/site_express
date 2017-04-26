@@ -1,0 +1,22 @@
+#home-carousel {
+	$height-xs: 300px;
+	$height: 500px;
+	
+	height: $height-xs;
+	@media(min-width: $screen-sm-min) {
+		height: $height;
+	}
+
+	div.item {
+		width: 100%;
+		
+		height: $height-xs;
+		@media(min-width: $screen-sm-min) {
+			height: $height;
+		}
+
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}

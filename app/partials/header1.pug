@@ -1,4 +1,4 @@
-nav.navbar.navbar-default.navbar-fixed-top
+nav.navbar.navbar-default.navbar-fixed-top(ng-class='{"retreat": currentPath != "/"}')
 	.container
 		.navbar-header
 			button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar')
@@ -6,14 +6,13 @@ nav.navbar.navbar-default.navbar-fixed-top
 				span.icon-bar
 				span.icon-bar
 			a.navbar-brand(href='/')
-				| [ Logo ]
-				//- img.img-responsive(src='')
+				span(ng-if='!strings.website["logo-url"]') [ Logo ]
+				img.img-responsive(ng-src='{{strings.website["logo-url"]}}')
 
 		#navbar.collapse.navbar-collapse
-			ul.nav.navbar-nav
+			ul.nav.navbar-nav.navbar-right
 				li(ng-repeat='item in strings.header.navbar.items track by $index' ng-class='{"active": $index == 0}' name='{{item.name}}')
 					a(ng-href='{{item.href}}') {{item.title}}
-			ul.nav.navbar-nav.navbar-right
 				li.text-center
 					a.social(ng-href='{{strings.website.facebook}}' target='_blank' ng-if='strings.website.facebook')
 						i.fa.fa-facebook
@@ -27,12 +26,23 @@ nav.navbar.navbar-default.navbar-fixed-top
 					a.social(ng-href='{{strings.website.youtube}}' target='_blank' ng-if='strings.website.youtube')
 						i.fa.fa-youtube
 
-.outdoor(ng-show='currentPath == "/"')
-	.picture(ng-parallax pattern="'https://s-media-cache-ak0.pinimg.com/originals/af/f1/cf/aff1cfdb975366126633cca2d48a39e9.jpg'" speed='0')
-	.cover
-		h2.title.text-center.text-gray-dark
-			| {{strings.header.banner.title}}
-		h4.subtitle.text-center.text-gray-dark.text-line-spacing
-			| {{strings.header.banner.subtitle}}
-		div.text-center
-			a.btn.btn-primary.btn-lg(ng-href='{{strings.header.banner.button.href}}') {{strings.header.banner.button.caption}}
+#carousel-header.carousel.slide(data-ride='carousel' ng-show='currentPath == "/"')
+	//- Wrapper for slides
+	.carousel-inner(role='listbox')
+		.item(ng-repeat="slide in strings.header.carousel.slides track by $index" ng-class='{"active": $index == 0}')
+			div
+				.picture(ng-parallax pattern="slide['image-url']" speed='0')
+				.cover
+					h2.title.text-center
+						| {{slide.title}}
+					p.subtitle.text-center
+						| {{slide.subtitle}}
+					p.text-center
+						a.btn.btn-primary.btn-lg.btn-outline.text-white(ng-href='{{slide.button.href}}' ng-if='slide.button.enabled') 
+							| {{slide.button.caption}}
+
+	//- Controls
+	a.left.carousel-control(data-target="#carousel-header" role="button" data-slide='prev')
+		span.fa.fa-angle-left(aria-hidden='true')
+	a.right.carousel-control(data-target="#carousel-header" role="button" data-slide='next')
+		span.fa.fa-angle-right(aria-hidden='true')

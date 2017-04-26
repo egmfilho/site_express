@@ -1,0 +1,230 @@
+{
+	"website": {		
+		"title": "Lorem Ipsum",
+		"logo-url": "",
+		"contact_mail": [{
+			"name": "Contato",
+			"mail": "contato@siteexpress.com"
+		}],
+		"phone": [{
+			"label": "Vivo",
+			"number": "(21) 99999-8888"			
+		}, {
+			"label": "Claro",
+			"number": "(21) 99999-8888"			
+		}],
+		"gmaps-api-key": "AIzaSyAweoS6Re-3ct3tPGEhRW94VsKY8nmZT9E",
+		"main-color": "FF0000",
+		"facebook": "http://www.facebook.com",
+		"twitter": "",
+		"google-plus": "",
+		"youtube": "https://www.youtube.com/watch?v=B8NXB7zAbmg"
+	},
+	"header": {
+		"navbar": {
+			"main-logo-url": "../images/logo_1.png",
+			"alternative-logo-url": "../images/logo_2_white.png",
+			"items": [
+				{
+					"title": "Home",
+					"name": "home",
+					"href": "#/"
+				}, {
+					"title": "Sobre",
+					"name": "about",
+					"href": "#/sobre"
+				}, {
+					"title": "Serviços",
+					"name": "works",
+					"href": "#/servicos-produtos"
+				}, {
+					"title": "Contato",
+					"name": "contact",
+					"href": "#/contato"
+				}
+			]
+		}
+	},
+	"footer": {
+		"logo-url": "../images/logo_1_white.png",
+		"urls": {
+			"items": [
+				{
+					"title": "Home",
+					"href": "#/"
+				}, {
+					"title": "Sobre",
+					"href": "#/sobre"
+				}, {
+					"title": "Serviços",
+					"href": "#/servicos-produtos"
+				}, {
+					"title": "Contato",
+					"href": "#/contato"
+				}
+			]
+		},
+		"signature": "Lorem Ipsum © 2017 Todos os direitos reservados"
+	},
+	"pages": {
+		"home": {			
+			"carousel": {
+				"slides": [
+					"../images/slide1.jpg",
+					"../images/slide2.jpg",
+					"../images/slide3.jpg"
+				]
+			},
+			"topics": {
+				"title": "Lorem Ipsum",
+				"subtitle": "\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"",
+				"items": [
+					{					
+						"icon": "fa-ravelry",
+						"text": "Nullam aliquet"					
+					},
+					{					
+						"icon": "fa-diamond",
+						"text": "Suspendisse ac sapien"				
+					},
+					{					
+						"icon": "fa-credit-card",
+						"text": "Duis suscipit"				
+					},
+					{					
+						"icon": "fa-building-o",
+						"text": "Quia dolor"				
+					}
+				]
+			},
+			"banner": {
+				"image-url": "../images/quem-buscamos.jpg",
+				"icon": "fa-group",
+				"title": "Nulla euismod pharetra efficitur",
+				"subtitle": "Pellentesque quis ligula volutpat, faucibus nibh id, ultricies ex. Nulla facilisi.",
+				"tags": [
+					{ "text": "Pellentesque" },
+					{ "text": "Aliquam" },
+					{ "text": "Vivamus" },
+					{ "text": "Mauris" }
+				],
+				"quotes": [
+					{
+						"author": "Mordekai",
+						"text": "Morbi lobortis, risus in lobortis molestie, ante mi posuere lacus, id hendrerit magna libero ut ligula."
+					},
+					{
+						"author": "Mr. M",
+						"text": "Sed vulputate nisl sed quam vehicula, nec pharetra mi accumsan."
+					},
+					{
+						"author": "Erich Von Daniken",
+						"text": "Nunc a porta dolor, vel ultricies odio. Donec euismod sit amet dolor in convallis."
+					}
+				]
+			},
+			"paragraphs": {
+				"title": "Pellentesque placerat",
+				"subtitle": "Cras varius purus sit amet orci imperdiet ultricies",
+				"items": [
+					{
+						"image-url": "./images/missao.png",
+						"title": "Cras varius purus",
+						"text": "Nullam ut massa ac turpis pellentesque vehicula ac ac lectus. Ut ante turpis, iaculis in tristique ac, hendrerit at neque."
+					}, {
+						"image-url": "./images/visao.png",
+						"title": "Vivamus sed metus",
+						"text": "Sed aliquet enim lacus, a eleifend magna bibendum eu. Aenean elit tortor, molestie eget fermentum eget, facilisis eget magna."
+					}, {
+						"image-url": "./images/objetivos.png",
+						"title": "Fusce ornare mauris",
+						"text": "Sed mollis rhoncus dui et volutpat. Nulla euismod pharetra efficitur. Etiam eu faucibus massa, ut luctus lectus. "
+					}, {
+						"image-url": "./images/ideia.png",
+						"title": "Duis cursus quam",
+						"text": "Etiam sed augue quis magna ullamcorper volutpat ac ac erat. Duis cursus quam id erat eleifend, ac accumsan risus rhoncus. Curabitur vitae mauris sit amet mi consectetur commodo."
+					}
+				]
+			}
+		},
+		"about": {
+			"cover": "../images/banner-quem-somos.jpg",
+			"title": "Lorem Ipsum",
+			"subtitle": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
+			"paragraphs": {
+				"title": "Pellentesque placerat",
+				"subtitle": "Cras varius purus sit amet orci imperdiet ultricies",
+				"items": [
+					{
+						"image-url": "./images/missao.png",
+						"title": "Cras varius purus",
+						"text": "Nullam ut massa ac turpis pellentesque vehicula ac ac lectus. Ut ante turpis, iaculis in tristique ac, hendrerit at neque."
+					}, {
+						"image-url": "./images/visao.png",
+						"title": "Vivamus sed metus",
+						"text": "Sed aliquet enim lacus, a eleifend magna bibendum eu. Aenean elit tortor, molestie eget fermentum eget, facilisis eget magna."
+					}, {
+						"image-url": "./images/objetivos.png",
+						"title": "Fusce ornare mauris",
+						"text": "Sed mollis rhoncus dui et volutpat. Nulla euismod pharetra efficitur. Etiam eu faucibus massa, ut luctus lectus. "
+					}, {
+						"image-url": "./images/ideia.png",
+						"title": "Duis cursus quam",
+						"text": "Etiam sed augue quis magna ullamcorper volutpat ac ac erat. Duis cursus quam id erat eleifend, ac accumsan risus rhoncus. Curabitur vitae mauris sit amet mi consectetur commodo."
+					}
+				]
+			}
+		},
+		"works": {
+			"cover": "../images/banner-kits.jpg",
+			"title": "Eleifend magna bibendum",
+			"subtitle": "Class aptent taciti sociosqu ad litora",
+			"services": {
+				"items": [{
+					"image-url": "https://app.nventree.co.uk/media/img/9941ac41af9d4c73b887c019809ef7b0/2015178306314f8091520196628dfbc0/Custom800.jpg",
+					"title": "Morbi semper turpis ex",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}, {
+					"image-url": "https://ae01.alicdn.com/kf/HTB10QGDNXXXXXbxXVXXq6xXFXXXA/5m-roll-2mm-12-Colors-Aluminum-font-b-Wires-b-font-font-b-craft-b-font.jpg",
+					"title": "Morbi semper turpis ex 2",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}, {
+					"image-url": "http://shared1.ad-lister.co.uk/UserImages/972b70e1-6c5e-4523-ac62-c1a50b1dd41e/Img/aluminium-wire-bright-green-11.jpg",
+					"title": "Morbi semper turpis ex 3",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}]
+			}
+		},
+		"contact": {
+			"cover": "../images/banner-fale-conosco.jpg",
+			"title": "Nullam ut massa ac turpis",
+			"subtitle": "Cras varius purus sit amet orci imperdiet ultricies",
+			"form": {
+				"title": "Aliquam consequat",
+				"subtitle": " Nunc a porta dolor, vel ultricies odio. Donec euismod sit amet dolor in convallis",
+				"fields": [{
+					"label": "Nome",
+					"name": "name",
+					"type": "text",
+					"required": true,
+					"enabled": true
+				}, {
+					"label": "Cidade",
+					"name": "city",
+					"type": "text",
+					"required": false,
+					"enabled": true
+				}, {
+					"label": "Email",
+					"name": "email",
+					"type": "email",
+					"required": true,
+					"enabled": true
+				}],
+				"message_field": {
+					"name": "Mensagem"
+				}
+			}
+		}
+	}
+}

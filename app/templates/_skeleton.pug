@@ -16,7 +16,7 @@ html
 		link(rel='stylesheet' href='styles/vendor.min.css')
 		link(rel='stylesheet' href='styles/main.css')
 
-	body(ng-app='siteExpress')
+	body(ng-app='siteExpress' ng-class='{"nav-margin": currentPath != "/"}')
 
 		#loading(ng-show='loading.isLoading()')
 			.spinner(style='transform: scale(2)')
@@ -25,6 +25,7 @@ html
 				.rect3
 				.rect4
 				.rect5
+
 
 		block header
 

@@ -3,8 +3,8 @@
 		"title": "Lorem Ipsum",
 		"logo-url": "",
 		"contact_mail": [{
-			"name": "Eduardo",
-			"mail": "edumig12@hotmail.com"
+			"name": "contato",
+			"mail": "contato@email.com"
 		}],
 		"phone": {
 			"icon": "fa-phone",
@@ -12,78 +12,117 @@
 		},
 		"gmaps-api-key": "AIzaSyAweoS6Re-3ct3tPGEhRW94VsKY8nmZT9E",
 		"main-color": "FF0000",
-		"facebook": "www.facebook.com",
+		"facebook": "",
 		"twitter": "",
 		"google-plus": "",
-		"youtube": "https://www.youtube.com/watch?v=B8NXB7zAbmg"
+		"youtube": "https://www.youtube.com/watch?v=B8NXB7zAbmg",
+		"main-logo-url": "",
+		"alternative-logo-url": ""
 	},
 	"header": {
 		"navbar": {
-			"items": [
-				{
+			"items": [{
 					"title": "Home",
 					"name": "home",
-					"href": "/"
+					"href": "#/"
 				}, {
 					"title": "Sobre",
 					"name": "about",
-					"href": "/sobre"
+					"href": "#/sobre"
 				}, {
 					"title": "Serviços",
 					"name": "works",
-					"href": "/servicos-produtos"
+					"href": "#/servicos-produtos"
 				}, {
 					"title": "Contato",
 					"name": "contact",
-					"href": "/contato"
-				}
-			]
+					"href": "#/contato"
+				}]
 		},
-		"banner": {
-			"title": "Lorem Ipsum",
-			"subtitle": "\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"",
-			"button": {
-				"caption": "Ver mais",
-				"href": "/sobre"
-			}
+		"carousel": {
+			"slides": [{
+				"image-url": "../images/slide1.jpg",
+				"title": "Lorem Ipsum",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"button": {
+					"enabled": true,
+					"caption": "Ver mais",
+					"href": "#/sobre"
+				}
+			}, {
+				"image-url": "../images/slide2.jpg",
+				"title": "Lorem Ipsum 2",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"button": {
+					"enabled": false,
+					"caption": "Ver menos",
+					"href": "#/sobre"
+				}
+			}, {
+				"image-url": "../images/slide3.jpg",
+				"title": "Lorem Ipsum 3",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+				"button": {
+					"enabled": false,
+					"caption": "Ver menos",
+					"href": "#/sobre"
+				}
+			}]
 		}
 	},
 	"pages": {
-		"home": {			
+		"home": {
+			"title": "Lorem Ipsum",
 			"paragraph": {
 				"title": "Lorem ipsum dolor sit amet",
 				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nibh, ultrices sed metus sed, varius aliquam arcu. In facilisis magna et laoreet feugiat. Ut turpis risus, egestas id odio nec, congue tempor elit. Vestibulum et mauris viverra, auctor dui venenatis, posuere neque. Vivamus mollis libero vitae lorem suscipit lobortis. Praesent non leo massa. Nunc commodo tempor pellentesque. Duis hendrerit erat diam, ut cursus turpis suscipit eu."
 			},
-			"topics": [
-				{					
+			"topics": [{					
 					"icon": "fa-user-o",
 					"title": "Nullam aliquet",
 					"text": "Suspendisse urna leo, pulvinar nec dictum eget, commodo at risus. Integer feugiat quis nisl sed convallis. Nullam aliquet, lorem quis feugiat tempus, purus neque pharetra ipsum, non placerat dolor tortor vel arcu. Aenean feugiat, nisl ut porta laoreet, arcu massa molestie nibh, ut tincidunt felis massa in eros."
-				},
-				{					
+				}, {
 					"icon": "fa-send-o",
 					"title": "Suspendisse ac sapien",
 					"text": "Integer in neque at dui posuere ornare sagittis ac mauris. Sed ultrices justo eu tristique lobortis. Nunc laoreet interdum leo at pretium. Suspendisse ac sapien ac purus vulputate auctor. Etiam accumsan tortor sollicitudin quam vulputate, ac dictum leo consectetur."
-				},
-				{					
+				}, {
 					"icon": "fa-envelope-open-o",
 					"title": "Duis suscipit",
 					"text": "Duis suscipit ex at neque posuere pharetra. Morbi orci lorem, feugiat quis nibh vehicula, sagittis facilisis velit. In porta accumsan mi, nec ultricies risus suscipit et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-				}
-			],
+				}],
 			"quote": {
 				"title": "Lorem ipsum",
 				"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas leo nibh, ultrices sed metus sed, varius aliquam arcu. In facilisis magna et laoreet feugiat. Ut turpis risus, egestas id odio nec, congue tempor elit.",
 				"author": "Erich Von Daniken"
 			},
 			"sidebanner": {
-				"image-url": "http://www.shximai.com/data/out/139/68297913-office-wallpapers.jpeg",
+				"image-url": "../images/picture1.jpeg",
 				"title": "Morbi semper turpis ex",
 				"text": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
 			}
 		},
+		"works": {
+			"cover": "../images/picture2.jpg",
+			"title": "Serviços & Produtos",
+			"services": {
+				"title": "Lorem Ipsum",
+				"items": [{
+					"image-url": "../images/picture3.jpg",
+					"title": "Morbi semper turpis ex",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}, {
+					"image-url": "../images/picture4.jpg",
+					"title": "Morbi semper turpis ex 2",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}, {
+					"image-url": "../images/picture5.jpg",
+					"title": "Morbi semper turpis ex 3",
+					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
+				}]
+			}
+		},
 		"about": {
-			"cover": "https://s-media-cache-ak0.pinimg.com/originals/18/c5/54/18c5543590edce651d9dae0f60615401.jpg",
+			"cover": "../images/picture2.jpg",
 			"title": "Sobre a empresa",
 			"paragraph": {
 				"title": "Lorem ipsum dolor sit amet",
@@ -100,28 +139,8 @@
 				}
 			}
 		},
-		"works": {
-			"cover": "https://s-media-cache-ak0.pinimg.com/originals/18/c5/54/18c5543590edce651d9dae0f60615401.jpg",
-			"title": "Serviços & Produtos",
-			"services": {
-				"title": "Lorem Ipsum",
-				"items": [{
-					"image-url": "https://app.nventree.co.uk/media/img/9941ac41af9d4c73b887c019809ef7b0/2015178306314f8091520196628dfbc0/Custom800.jpg",
-					"title": "Morbi semper turpis ex",
-					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
-				}, {
-					"image-url": "https://ae01.alicdn.com/kf/HTB10QGDNXXXXXbxXVXXq6xXFXXXA/5m-roll-2mm-12-Colors-Aluminum-font-b-Wires-b-font-font-b-craft-b-font.jpg",
-					"title": "Morbi semper turpis ex 2",
-					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
-				}, {
-					"image-url": "http://shared1.ad-lister.co.uk/UserImages/972b70e1-6c5e-4523-ac62-c1a50b1dd41e/Img/aluminium-wire-bright-green-11.jpg",
-					"title": "Morbi semper turpis ex 3",
-					"description": "Aenean vitae quam non eros sodales porttitor. Morbi semper turpis ex, non cursus leo luctus sed. Duis ac velit vestibulum, tincidunt velit sit amet, pharetra nulla. In iaculis vel magna nec hendrerit. Suspendisse imperdiet nisl ut dui bibendum fermentum. Donec ac facilisis felis. Mauris bibendum vitae ante non rutrum."
-				}]
-			}
-		},
 		"contact": {
-			"cover": "https://s-media-cache-ak0.pinimg.com/originals/18/c5/54/18c5543590edce651d9dae0f60615401.jpg",
+			"cover": "../images/picture2.jpg",
 			"title": "Entre em contato",
 			"map": {
 				"address": {
@@ -131,29 +150,29 @@
 					"line3": "Tel: (21) 2222-3333"
 				},
 				"lattitude": "-22.415787",
-				"longitude": "-42.971796" 
+				"longitude": "-42.971796"
 			},			
 			"form": {
 				"title": "Fale conosco",
 				"fields": [{
-					"label": "Nome",
-					"name": "name",
-					"type": "text",
-					"required": true,
-					"enabled": true
-				}, {
-					"label": "Cidade",
-					"name": "city",
-					"type": "text",
-					"required": false,
-					"enabled": true
-				}, {
-					"label": "Email",
-					"name": "email",
-					"type": "email",
-					"required": true,
-					"enabled": true
-				}],
+						"label": "Nome",
+						"name": "name",
+						"type": "text",
+						"required": true,
+						"enabled": true
+					}, {
+						"label": "Cidade",
+						"name": "city",
+						"type": "text",
+						"required": true,
+						"enabled": true
+					}, {
+						"label": "Email",
+						"name": "email",
+						"type": "email",
+						"required": true,
+						"enabled": true
+					}],
 				"message_field": {
 					"name": "Mensagem"
 				}

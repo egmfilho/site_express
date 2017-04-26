@@ -1,0 +1,242 @@
+$main-color: #049a5c;
+// $main-color: lighten(#245424, 12%);
+
+$main-color-darker:  darken($main-color, 20%);
+$main-color-dark:    darken($main-color, 13%);
+$main-color-light:   lighten($main-color, 13%);
+$main-color-lighter: lighten($main-color, 20%);
+
+$brand-primary: $main-color;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+@import "../../bower_components/compass-sass-mixins/lib/compass";
+
+@import "awesome-bootstrap-checkbox";
+
+body {
+	padding-top: 50px;
+
+	@media(min-width: $screen-sm-min) {
+		padding-top: 0;
+
+		&.offset-top-50 {
+			padding-top: 50px;			
+		}
+	}
+}
+
+.offset-top-15 {
+	margin-top: 15px !important;
+}
+
+.offset-top-30 {
+	margin-top: 30px !important;
+}
+
+.offset-top-60 {
+	margin-top: 60px !important;
+}
+
+.offset-bottom-15 {
+	margin-bottom: 15px !important;
+}
+
+.offset-bottom-30 {
+	margin-bottom: 30px !important;
+}
+
+.offset-bottom-60 {
+	margin-bottom: 60px !important;
+}
+
+.offset-left-15 {
+	margin-left: 15px !important;
+}
+
+.offset-left-30 {
+	margin-left: 30px !important;
+}
+
+.text-primary {
+	color: $brand-primary;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-gray {
+	color: $gray-light;
+}
+
+.section-header {
+	font-family: 'Satisfy', cursive;	
+}
+
+.section-subheader {	
+	font-family: 'Open Sans', sans-serif;
+}
+
+.text-light {
+	color: $gray-light;
+	font-weight: 200 !important;	
+}
+
+.text-sm {
+	font-size: 1.2em;
+}
+
+.text-md {
+	font-size: 1.6em;
+}
+
+.text-lg {
+	font-size: 3em;
+}
+
+.text-xlg {
+	font-size: 4em;
+}
+
+.icon-xlg {
+	font-size: 8em;
+}
+
+.icon-lg {
+	font-size: 5em;
+}
+
+.icon-md {
+	font-size: 3em;
+}
+
+.icon-sm {
+	font-size: 1.2em;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.cover-background {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.darken-background {
+	-webkit-filter: brightness(40%);
+	-moz-filter: brightness(40%);
+	filter: brightness(40%);
+}
+
+.btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    &:focus, &:active {
+    	outline: none !important;
+    }
+
+    &.btn-pill {
+    	border-radius: 25px;
+    }
+}
+
+
+.outline-border {
+	&:focus {
+		// border-color: $main-color;
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.input-style {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 15px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: $gray-lighter;
+}
+
+.checkbox input[type="checkbox"]:focus, .checkbox input[type="checkbox"]:focus + label::before {
+	outline: none;
+	box-shadow: none;
+}
+
+.form-control {
+	@at-root {
+		input#{&} {				
+			height: 45px;
+			@extend .outline-border;
+			@extend .input-style;
+		}
+
+		textarea#{&} {
+			height: 150px;
+			@extend .outline-border;
+			@extend .input-style;
+		}
+
+		select#{&} {
+			height: 45px;
+			-webkit-appearance: none;
+  			-webkit-border-radius: 0px;
+  			border-radius: 0;
+			@extend .outline-border;
+			@extend .input-style;
+		}
+	}
+}
+
+.custom-select {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'Open Sans', sans-serif;	
+
+	&.custom-select-block {
+		width: 100%;
+
+		.btn {
+			&:first-child {
+				width: calc(100% - 32px);
+			}
+		}
+
+		.dropdown-menu {
+			width: 100%;
+			font-size: 14px;
+			color: $input-color;
+		}
+	}
+
+	button.btn {
+		background-color: $gray-lighter;
+		border: none;
+		border-radius: 0;
+		height: 45px;
+		font-size: 14px;
+		color: $input-color;
+		overflow: hidden;
+	}	
+}
+
+textarea {
+	resize: none;
+}
+
+@import 'loading';
+@import 'header';
+@import 'footer';
+@import 'templates';
+@import 'home';
+@import 'sistema';
+@import 'works';
+@import 'cadastre-se';
+@import 'entrar';

@@ -1,0 +1,57 @@
+.row
+	#home-carousel.carousel.slide(data-ride='carousel')
+		.carousel-inner(role='list-box')
+			.item(ng-repeat='slide in strings.pages.home.carousel.slides track by $index' ng-class='{"active": $index == 0}' ng-style='{"background-image": "url( {{slide}} )"}')
+
+		// Controls
+		a.left.carousel-control(data-target='#home-carousel' role='button' data-slide='prev')
+			span.glyphicon.glyphicon-chevron-left
+		a.right.carousel-control(data-target='#home-carousel' role='button' data-slide='next')
+			span.glyphicon.glyphicon-chevron-right
+
+.container.offset-top-60.offset-bottom-60
+	h1.section-header.text-lg.text-center {{strings.pages.home.topics.title}}
+	p.section-subheader.text-center.text-gray.text-sm.offset-bottom-30
+		| {{strings.pages.home.topics.subtitle}}
+	.row
+		.col-xs-12.col-sm-6.col-md-3(ng-repeat='item in strings.pages.home.topics.items')
+			p.text-primary.text-center.offset-top-60
+				span.icon-xlg.fa(ng-class='item.icon')
+			p.text-center.text-md.text-light.offset-top-30 {{item.text}}
+
+#dark-banner.row
+	.cover-background.darker(ng-style='{"background-image": "url(" + strings.pages.home.banner[\'image-url\'] + ")"}')
+	.foreground
+		p.text-center.text-white
+			i.icon-lg.fa(ng-class='strings.pages.home.banner.icon')
+		
+		h1.header.text-center.text-white.text-lg
+			| {{strings.pages.home.banner.title}}
+
+		h3.subheader.text-center.text-white.offset-top-30
+			| {{strings.pages.home.banner.subtitle}}
+		
+		p.text-center.offset-top-30(style='max-width: 100%;')
+			span.label.label-primary.text-sm(ng-repeat='tag in strings.pages.home.banner.tags')
+				| {{tag.text}}
+
+		.hidden-xs.col-md-4(ng-repeat='quote in strings.pages.home.banner.quotes')
+			p.quote.text-white.offset-top-30
+				| “{{quote.text}}” 
+				br 
+				| - {{quote.author}}
+
+#about.container.offset-top-60.offset-bottom-60
+	h1.section-header.text-lg.text-center {{strings.pages.home.paragraphs.title}}
+	p.section-subheader.text-center.text-gray.text-sm.offset-bottom-30
+		| {{strings.pages.home.paragraphs.subtitle}}
+	.row
+		.col-xs-12.col-md-6(ng-repeat='paragraph in strings.pages.home.paragraphs.items')
+			.row.offset-top-30
+				.col-sm-6.vcenter
+					.thumb
+						img.img-responsive.img-circle(ng-src='{{paragraph["image-url"]}}')
+				.col-sm-6.vcenter
+					.description
+						p.text-md.offset-top-30 {{paragraph.title}}
+						p {{paragraph.text}}

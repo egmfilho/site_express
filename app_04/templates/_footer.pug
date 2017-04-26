@@ -1,0 +1,52 @@
+block footer
+	.container-fluid.footer(ng-controller='FooterCtrl')
+		.container
+			.row.offset-top-15
+				.col-xs-12.col-sm-8.col-md-3
+					.logo(ng-style='{"background-image": "url(" + strings.footer["logo-url"] + ")"}')
+				.col-xs-12.col-sm-4.col-md-3.text-center-xs
+					h3.text-white Site
+					ul.list-unstyled.offset-left-15
+						li(ng-repeat='item in strings.footer.urls.items')
+							a(ng-href='{{item.href}}') {{item.title}}
+
+				.col-xs-12.col-sm-4.col-sm-push-8.col-md-3.col-md-push-0.text-center-xs
+					h3.text-white Participe
+					ul.list-unstyled.offset-left-15
+						li
+							a(href='/') {{strings.website.title}}
+						li
+							a(ng-href='{{strings.website.facebook}}' target='_blank' ng-if='strings.website.facebook') Facebook
+						li
+							a(ng-href='{{strings.website.twitter}}' target='_blank' ng-if='strings.website.twitter') Twitter
+						li
+							a(ng-href='{{strings.website["google-plus"]}}' target='_blank' ng-if='strings.website["google-plus"]') Google Plus
+						li
+							a(ng-href='{{strings.website.youtube}}' target='_blank' ng-if='strings.website.youtube') YouTube
+						
+						
+				.col-xs-12.col-sm-8.col-sm-pull-4.col-md-3.col-md-pull-0.text-center-xs
+					h3.text-white Contatos
+					ul.list-unstyled.text-white.offset-left-15
+						li(ng-if='strings.website.phone.length > 0')
+							| Telefone{{strings.website.phone.length > 1 ? 's' : ''}}:
+							br
+							a(href='' ng-repeat='phone in strings.website.phone') 
+								| {{phone.label}}: {{phone.number}}
+								br
+						li(ng-if='strings.website.contact_mail.length > 0')
+							br
+							| Email{{strings.website.contact_mail.length > 1 ? 's' : ''}}:
+							br
+							a(ng-repeat='mail in strings.website.contact_mail' ng-href='mailto:{{mail.mail}}')
+								| {{mail.mail}}
+								br
+
+				.col-xs-12.copyright.offset-top-30
+					p.text-white.clearfix.text-center-xs {{strings.footer.signature}}
+						a.hidden-xs.pull-right(href='http://futuraagencia.com.br' target='_blank')
+							i.fa.fa-cube
+							|  Futura Agência
+						a.visible-xs-block.center-block.offset-top-15(href='http://futuraagencia.com.br' target='_blank')
+							i.fa.fa-cube
+							|  Futura Agência

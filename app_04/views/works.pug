@@ -1,0 +1,23 @@
+.row
+	#dark-banner.banner-small
+		.cover-background.dark(ng-style='{"background-image": "url(" + strings.pages.works.cover + ")"}')
+		.foreground
+			h1.section-header.text-xlg.text-center.text-white.offset-top-60 {{strings.pages.works.title}}
+			p.section-subheader.text-center.text-sm.text-white.offset-bottom-30
+				| {{strings.pages.works.subtitle}}
+
+.services.offset-top-60
+	.container
+
+		.row
+			.service(ng-repeat='service in strings.pages.works.services.items track by $index')
+				.col-xs-12.col-sm-6.remove-padding(ng-class='{"col-sm-push-6": $index % 2 != 0}')
+					.picture(ng-style='{ "background-image": "url( {{service[\"image-url\"]}} )" }')
+				.col-xs-12.col-sm-6(ng-class='{"col-sm-pull-6": $index % 2 != 0}')
+					.description
+						h2.text-center.text-md
+							| {{service.title}}
+						p.text-sm.text-line-spacing.text-gray.offset-top-30
+							| {{service.description}}
+
+.offset-top-60

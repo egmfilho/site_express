@@ -1,0 +1,31 @@
+.row
+	#dark-banner.banner-small
+		.cover-background.dark(ng-style='{"background-image": "url(" + strings.pages.contact.cover + ")"}')
+		.foreground
+			h1.section-header.text-xlg.text-center.text-white.offset-top-60 {{strings.pages.contact.title}}
+			p.section-subheader.text-center.text-sm.text-white.offset-bottom-30
+				| {{strings.pages.contact.title}}
+
+.container.offset-top-60.offset-bottom-60
+	form.row.form-contact(name='contact' method='POST')
+		.col-xs-12.col-sm-offset-2.col-sm-8
+			h2.section-header.text-lg.text-center {{strings.pages.contact.form.title}}
+			p.section-subheader.text-gray.text-sm.text-center.offset-bottom-60
+				| {{strings.pages.contact.form.subtitle}}
+
+			.fields(ng-repeat='field in strings.pages.contact.form.fields' ng-if='field.enabled')
+					h4.text-light
+						| {{field.label}}
+					input.form-control(type='{{field.type}}' name='{{field.name}}' ng-required='{{field.required}}')
+
+			.row
+				.col-xs-12.offset-top-15
+						h4.text-light
+							| {{strings.pages.contact.form['message_field'].name}}
+						textarea.form-control(type='text' rows='8' name='message' required='true')
+
+			.row.offset-top-30
+				.col-xs-12.col-sm-push-8.col-sm-4
+					button.btn.btn-primary.btn-block.btn-lg.btn-pill(type='submit') 
+						span.fa.fa-send-o
+						|  Enviar

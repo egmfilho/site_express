@@ -1,10 +1,16 @@
-@import "variables";
-// @import "variables-dark";
+// @import "variables";
+@import "variables-dark";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../bower_components/compass-sass-mixins/lib/compass";
+
+body {
+	&.nav-margin {
+		margin-top: 50px;
+	}
+}
 
 .btn {
 	border-radius: 2px;
